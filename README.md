@@ -6,6 +6,7 @@
 
   1. [Hoisting](#hoisting)
   1. [Conditional Expressions & Equality](#conditional-expressions--equality)
+  1. [Naming Convention](#naming-convention)
 
 ## Hoisting
 
@@ -42,6 +43,21 @@ else {
 ```javascript
 if (false) { console.log('not likely'); }
 else { console.log('For sure'); }
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+## Naming Convention
+
+### Use lowerCamelCase
+
+Use lowerCamelCase for naming variables and function names. Only two letter acronyms should be uppercased.
+
+```javascript
+var someVariableName,
+    someUrl,
+    someCdn,
+    someAwesomeIODomain;
 ```
 
 **[⬆ back to top](#table-of-contents)**
