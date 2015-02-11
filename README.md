@@ -10,11 +10,11 @@
 
 ## Hoisting
 
-  - Variables only used as a loop index or counter do not need to be hoisted to the top of their scope. You certainly can in order to help avoid accidental/unexpected value, but it's not required.
+  - Variables only used as a loop index or counter do not need to be hoisted to the top of their scope. You certainly can hoist to help avoid accidental collision /unexpected value, but it's not required.
 
 ```javascript
 var thingList = [],
-    handyDandy = true;
+    someVar = true;
 
 for (var thing in thingList) {
   console.log(thing);
@@ -26,7 +26,7 @@ for (var thing in thingList) {
 
 ## Conditional Expressions & Equality
 
-  - Conditional statements including an `else` clause should be structured as such: bracket on the same line as else, code indented on the next line.
+  - Conditional statements including an `else` clause should be structured as such: else on a new line from closing bracket and on the same line as opening bracket, of course code indented within clause.
 
 ```javascript
 if (false) {
@@ -38,11 +38,11 @@ else {
 }
 ```
 
-  - Conditional statement clauses that only contain one line of executed code *may* be placed on one line. However, readability and consistency should always preceed space savings.
+  - Conditional statements that only contain one **short** line of executed code *may* be placed on one line. However, readability and consistency should always preceed space savings.
 
 ```javascript
-if (false) { console.log('not likely'); }
-else { console.log('For sure'); }
+if (false) console.log('not likely');
+else console.log('For sure');
 ```
 
 **[⬆ back to top](#table-of-contents)**
