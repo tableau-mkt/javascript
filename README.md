@@ -8,6 +8,22 @@
   1. [Conditional Expressions & Equality](#conditional-expressions--equality)
   1. [Naming Convention](#naming-convention)
 
+
+## Function Params
+
+The second paramter passed to a function should probably be an options object; once you need three you really must-- and you'll really wish you'd done so already.
+
+```javascript
+function myFunction($data) { // Tidy :)
+
+function myFunction($options) { // Flexible :)
+
+function myFunction($oneThing, $yetAnother) { // Slippery slope :(
+
+function myFunction($controller, $options) { // Forethought :)
+```
+
+
 ## Hoisting
 
 Variables only used as a loop index or counter do not need to be hoisted to the top of their scope. You certainly can hoist to help avoid accidental collision /unexpected value, but it's not required.
