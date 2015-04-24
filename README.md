@@ -18,9 +18,11 @@ function myFunction($data) { // Tidy :)
 
 function myFunction($options) { // Flexible :)
 
+function myFunction($controller, $options) { // Forethought :)
+
 function myFunction($oneThing, $yetAnother) { // Slippery slope :(
 
-function myFunction($controller, $options) { // Forethought :)
+function myFunction($oneThing, $yetAnother, $evenMore) { // Please don't
 ```
 
 
