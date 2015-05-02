@@ -123,7 +123,7 @@ Drupal.settings.longModule.mySetting
 ```
 
 ## Behaviors
-todo
+See [Drupal.behave](https://github.com/tableau-mkt/behave)
 
 
 ## Contributors
