@@ -1,12 +1,17 @@
 # JavaScript Style Guide, extended () {
 
 *An approach to JavaScript beyond reasonable*
+Don't be afraid to make rules for: readability, future-proofing, and elegance.
 
 ## Table of Contents
 
+  1. [Parameters](#function-params)
   1. [Hoisting](#hoisting)
   1. [Conditional Expressions & Equality](#conditional-expressions--equality)
   1. [Naming Convention](#naming-convention)
+  1. [Drupal](#drupal)
+    1. [Namespacing](#namespacing)
+    1. [Behaviors](#behaviors)
 
 
 ## Function Params
@@ -67,7 +72,6 @@ while ((counter >= 0) && (failSafe !== true)) {
 }
 ```
 
-
 Conditional statements that only contain one **short** piece of executed code *may* be placed on one line, (including only one space.) Short is defined as...
 
 - `return;`
@@ -86,6 +90,7 @@ However, readability and consistency should always preceed space savings!
 
 **[⬆ back to top](#table-of-contents)**
 
+
 ## Naming Convention
 
 ### Use lowerCamelCase
@@ -100,6 +105,26 @@ var someVariableName,
 ```
 
 **[⬆ back to top](#table-of-contents)**
+
+
+## Drupal
+
+## Namespacing
+Use camelcase names for Drupal settings and behaviors.
+```javascript
+Drupal.settings.myModule.mySetting
+Drupal.behaviors.myModuleBehavior
+```
+
+You can shorten an unwieldy module name if it's interally custom and a collision is unlikely.
+```javascript
+// /sites/all/modules/custom/rather_long_module_name/js/long-module.js
+Drupal.settings.longModule.mySetting
+```
+
+## Behaviors
+todo
+
 
 ## Contributors
 
