@@ -33,7 +33,10 @@ function myFunction($oneThing, $yetAnother, $evenMore) { // Please don't
 
 ## Hoisting
 
-Variables only used as a loop index or counter do not need to be hoisted to the top of their scope. You certainly can hoist to help avoid accidental collision /unexpected value, but it's not required.
+Variables only used in specific code sections (e.g., as a loop index or counter) do not need to be declared at the top of their scope.
+
+> If a particular identifier has been declared var once or more anywhere in a function body(*), then all use of that identifier in the block will be referring to the local variable.
+> [Stackoverflow](http://stackoverflow.com/a/3685090/417839).
 
 ```javascript
 var thingList = [],
