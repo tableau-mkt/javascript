@@ -85,7 +85,7 @@ while ((people <= threshold) && (todoItems >= people) && (mySession.active === t
 
 ```javascript
 var validList = (typeof myObj.myVar === 'string'),
-    active = checkSession();
+    active = checkSession(myUserObj, 'status');
 
 if (validList && counter.length && active) {
   // GOOD: So obvious!
