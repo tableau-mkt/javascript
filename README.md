@@ -63,15 +63,32 @@ else {
 }
 ```
 
-Conditional statements with mulitple clauses including an operator should include explicit parenthesis.
+Conditional statements with mulitple clauses including operators can be hard to skim, consider using explicit parenthesis or clear variables.
 
 ```javascript
-if ((typeof myObj.myVar === 'string') && checkStuff()) {
-  // Wasn't that nice?
+if (typeof myObj.myVar === 'string' && counter >= maxCount && failSafe !== true) {
+  // BAD: Takes a moment to realize what's going on.
 }
+```
 
-while ((counter >= 0) && (failSafe !== true)) {
-  // Easier to read.
+```javascript
+while (people <= threshold && todoItems >= people) {
+  // FINE: Short and clear.
+}
+```
+
+```javascript
+while ((people <= threshold) && (todoItems >= people) && (mySession.active === true)) {
+  // HANDY: Helpful to read quickly.
+}
+```
+
+```javascript
+var validList = (typeof myObj.myVar === 'string'),
+    active = checkSession();
+
+if (validList && counter.length && active) {
+  // GOOD: So obvious!
 }
 ```
 
