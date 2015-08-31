@@ -148,7 +148,7 @@ See [Drupal.behave](https://github.com/tableau-mkt/behave)
 
 ## Property Existence
 
-- `hasOwnProperty(property)` — ignore inherited properties
+- `myObject.hasOwnProperty(property)` — ignore inherited properties
 - `myProperty in myObject` — check if object has property, including inherited properties.
 - `myObject.myProperty` or `myObject[property]` — shortest, preferred. NB: `0` is falsy.
 
