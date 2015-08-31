@@ -12,6 +12,7 @@ Don't be afraid to make rules for: readability, future-proofing, and elegance.
   1. [Drupal](#drupal)
     1. [Namespacing](#namespacing)
     1. [Behaviors](#behaviors)
+  1. [Property Existence](#property-existence)
 
 
 ## Function Params
@@ -145,6 +146,11 @@ Drupal.settings.longModule.mySetting
 ## Behaviors
 See [Drupal.behave](https://github.com/tableau-mkt/behave)
 
+## Property Existence
+
+- `hasOwnProperty(property)` — ignore inherited properties
+- `myProperty in myObject` — check if object has property, including inherited properties.
+- `myObject.myProperty` or `myObject[property]` — shortest, preferred. NB: `0` is falsy.
 
 ## Contributors
 
