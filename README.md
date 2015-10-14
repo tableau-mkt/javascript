@@ -8,6 +8,7 @@ Don't be afraid to make rules for: readability, future-proofing, and elegance.
   1. [Parameters](#function-params)
   1. [Hoisting](#hoisting)
   1. [Conditional Expressions & Equality](#conditional-expressions--equality)
+  1. [Function Naming](#function-naming)
   1. [Naming Convention](#naming-convention)
   1. [Drupal](#drupal)
     1. [Namespacing](#namespacing)
@@ -111,6 +112,25 @@ However, readability and consistency should always preceed space savings!
 
 **[⬆ back to top](#table-of-contents)**
 
+## Function Naming
+
+AirBnb's style guide says:
+
+> Name your functions. This is helpful for stack traces.
+
+```javascript
+// bad
+var log = function(msg) {
+  console.log(msg);
+};
+
+// good
+var log = function log(msg) {
+  console.log(msg);
+};
+```
+
+**However**, in Chrome devtools, this is no longer necessary. While debugging (in stack traces, etc.) function names are now inferred from the variable names or object property names they're assigned to.
 
 ## Naming Convention
 
