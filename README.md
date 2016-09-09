@@ -14,6 +14,7 @@ Don't be afraid to make rules for: readability, future-proofing, and elegance.
     1. [Namespacing](#namespacing)
     1. [Behaviors](#behaviors)
   1. [Property Existence](#property-existence)
+  1. [Docs & Comments](#docs-comments)
 
 
 ## Function Params
@@ -150,7 +151,7 @@ var someVariableName,
 
 ## Drupal
 
-## Namespacing
+### Namespacing
 Use camelcase names for Drupal settings and behaviors.
 ```javascript
 Drupal.settings.myModule.mySetting
@@ -163,14 +164,52 @@ You can shorten an unwieldy module name if it's interally custom and a collision
 Drupal.settings.longModule.mySetting
 ```
 
-## Behaviors
+### Behaviors
 See [Drupal.behave](https://github.com/tableau-mkt/behave)
+
 
 ## Property Existence
 
 - `myObject.hasOwnProperty(property)` — ignore inherited properties
 - `myProperty in myObject` — check if object has property, including inherited properties.
 - `myObject.myProperty` or `myObject[property]` — shortest, preferred. NB: `0` is falsy.
+
+**[⬆ back to top](#table-of-contents)**
+
+
+## Docs & Comments
+
+### Doc Blocks
+You should always strive for super readable and parse-able doc blocks. Make developers, IDEs, and documentation generators happy.  Here are some basic requirements...
+```javascript
+/**
+  * Description of function.
+  *
+  * Longer description with more details or examples is occasionally required.
+  *
+  * @todo Something to change later, ticket number is nice #123.
+  *
+  * @param {type} name
+  *   Description of variable, often unnecessary.
+  * @param {type} var
+  *
+  * @return {type}
+  */
+function myFunc () {
+```
+
+### Comments
+You should write code comments that are concise, explicit, and reasonably grammatically correct (sentence fragments are ok).  Put a space after the comment mark, start with a capital, and end with a period.
+
+You should probably not have more than 4-5 lines without explanation. Omit unnecessary words like "this code..." or "here is the place where...", this could be said about every comment.
+
+**Examples:**
+
+`// Retrieves data from the myServer API.`
+
+`// Load person record via utility library.`
+
+**[⬆ back to top](#table-of-contents)**
 
 ## Contributors
 
