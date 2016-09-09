@@ -14,7 +14,7 @@ Don't be afraid to make rules for: readability, future-proofing, and elegance.
     1. [Namespacing](#namespacing)
     1. [Behaviors](#behaviors)
   1. [Property Existence](#property-existence)
-  1. [Docs & Comments](#docs-comments)
+  1. [Docs & Comments](#docs--comments)
 
 
 ## Function Params
@@ -183,9 +183,9 @@ See [Drupal.behave](https://github.com/tableau-mkt/behave)
 You should always strive for super readable and parse-able doc blocks. Make developers, IDEs, and documentation generators happy.  Here are some basic requirements...
 ```javascript
 /**
-  * Description of function.
+  * Brief description of function.
   *
-  * Longer description with more details or examples is occasionally required.
+  * A longer explanation with details or examples is occasionally required.
   *
   * @todo Something to change later, ticket number is nice #123.
   *
@@ -199,9 +199,9 @@ function myFunc () {
 ```
 
 ### Comments
-You should write code comments that are concise, explicit, and reasonably grammatically correct (sentence fragments are ok).  Put a space after the comment mark, start with a capital, and end with a period.
+Code comments should be: concise, explicit, and reasonably grammatically correct (sentence fragments are ok).  Put a space after the comment mark, start with a capital, and end with a period.
 
-You should probably not have more than 4-5 lines without explanation. Omit unnecessary words like "this code..." or "here is the place where...", this could be said about every comment.
+There should never really be more than 4-5 line of code (non-control structure) without explanation. Omit unnecessary words like "This code does..." or "Here is the place where...", this could be said about every comment.
 
 **Examples:**
 
