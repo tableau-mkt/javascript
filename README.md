@@ -140,23 +140,33 @@ function myFunc (list) {
 
 ## Function Naming
 
+Be sure to avoid nameless anonymous functions. Give them a clear stack-trace-friendly name.
+
+```javascript
+$.each(list, function processList (i, val) {
+  // ...
+});
+```
+
 AirBnb's style guide says:
 
 > Name your functions. This is helpful for stack traces.
 
+However, this is no longer necessary
+
 ```javascript
-// bad
+// CORRECT.
 var log = function (msg) {
   console.log(msg);
 };
 
-// good
+// PREVIOUS PROBLEM.
 var log = function log (msg) {
   console.log(msg);
 };
 ```
 
-**However**, in Chrome devtools, this is no longer necessary. While debugging (in stack traces, etc.) function names are now inferred from the variable names or object property names they're assigned to.
+_In Chrome devtools, while debugging (in stack traces, etc.) function names are now inferred from the variable names or object property names they're assigned to._
 
 ## Naming Convention
 
