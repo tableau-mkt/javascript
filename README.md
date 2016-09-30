@@ -22,15 +22,15 @@ Don't be afraid to make rules for: readability, future-proofing, and elegance.
 The second paramter passed to a function should probably be an options object; once you need three you really must-- and you'll really wish you'd done so already.
 
 ```javascript
-function myFunction($data) { // Tidy :)
+function myFunction ($data) { // Tidy :)
 
-function myFunction($options) { // Flexible :)
+function myFunction ($options) { // Flexible :)
 
-function myFunction($controller, $options) { // Forethought :)
+function myFunction ($controller, $options) { // Forethought :)
 
-function myFunction($oneThing, $yetAnother) { // Slippery slope :(
+function myFunction ($oneThing, $yetAnother) { // Slippery slope :(
 
-function myFunction($oneThing, $yetAnother, $evenMore) { // Please don't
+function myFunction ($oneThing, $yetAnother, $evenMore) { // Please don't
 ```
 
 
@@ -113,6 +113,31 @@ However, readability and consistency should always preceed space savings!
 
 **[⬆ back to top](#table-of-contents)**
 
+
+## Tidy functions
+
+You should strive to keep a function limited to one screen and avoid indenting farther than necessary.
+
+#### Exit Early
+``` javascript
+function myFunc (list) {
+  if (!list.length) {
+    return;
+  }
+  // Do a bunch of stuff...
+}
+```
+
+However, if it's simple keep it simple.
+``` javascript
+function myFunc (list) {
+  if (list.length) {
+    doSomething(list.property);
+    doMore(list);
+  }
+}
+```
+
 ## Function Naming
 
 AirBnb's style guide says:
@@ -121,12 +146,12 @@ AirBnb's style guide says:
 
 ```javascript
 // bad
-var log = function(msg) {
+var log = function (msg) {
   console.log(msg);
 };
 
 // good
-var log = function log(msg) {
+var log = function log (msg) {
   console.log(msg);
 };
 ```
@@ -152,15 +177,15 @@ var someVariableName,
 ## Drupal
 
 ### Namespacing
-Use camelcase names for Drupal settings and behaviors.
+Use camelCase names for Drupal settings and behaviors.
 ```javascript
 Drupal.settings.myModule.mySetting
 Drupal.behaviors.myModuleBehavior
 ```
 
-You can shorten an unwieldy module name if it's interally custom and a collision is unlikely.
+You can shorten an unwieldy namespace, responsibly.
 ```javascript
-// /sites/all/modules/custom/rather_long_module_name/js/long-module.js
+// sites/all/modules/custom/rather_long_module_name/js/long-module.js
 Drupal.settings.longModule.mySetting
 ```
 
