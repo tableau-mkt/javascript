@@ -118,7 +118,7 @@ However, readability and consistency should always preceed space savings!
 
 You should strive to keep functions limited to one screen of text, and avoid indenting farther than necessary. Indentation can also be a sign of [cyclomatic complexity](https://en.wikipedia.org/wiki/Cyclomatic_complexity), which is bad for a number of reasons including test-ability.
 
-#### Exit Early
+### Exit Early
 One technique to avoid indentation is parameter validation at the top of a function before processing logic.
 
 ``` javascript
@@ -140,7 +140,7 @@ function myFunc(list) {
 }
 ```
 
-## Function Naming
+### Function Naming
 
 Be sure to avoid nameless anonymous functions. Give them a clear stack-trace-friendly name.
 
@@ -167,6 +167,9 @@ var log = function log(msg) {
   console.log(msg);
 };
 ```
+
+**[⬆ back to top](#table-of-contents)**
+
 
 _In Chrome devtools, while debugging (in stack traces, etc.) function names are now inferred from the variable names or object property names they're assigned to._
 
