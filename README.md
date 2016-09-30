@@ -22,15 +22,15 @@ Don't be afraid to make rules for: readability, future-proofing, and elegance.
 The second paramter passed to a function should probably be an options object; once you need three you really must-- and you'll really wish you'd done so already.
 
 ```javascript
-function myFunction ($data) { // Tidy :)
+function myFunction($data) { // Tidy :)
 
-function myFunction ($options) { // Flexible :)
+function myFunction($options) { // Flexible :)
 
-function myFunction ($controller, $options) { // Forethought :)
+function myFunction($controller, $options) { // Forethought :)
 
-function myFunction ($oneThing, $yetAnother) { // Slippery slope :(
+function myFunction($oneThing, $yetAnother) { // Slippery slope :(
 
-function myFunction ($oneThing, $yetAnother, $evenMore) { // Please don't
+function myFunction($oneThing, $yetAnother, $evenMore) { // Please don't
 ```
 
 
@@ -116,11 +116,13 @@ However, readability and consistency should always preceed space savings!
 
 ## Tidy functions
 
-You should strive to keep a function limited to one screen and avoid indenting farther than necessary.
+You should strive to keep functions limited to one screen of text, and avoid indenting farther than necessary. Indentation can also be a sign of [cyclomatic complexity](https://en.wikipedia.org/wiki/Cyclomatic_complexity), which is bad for a number of reasons including test-ability.
 
 #### Exit Early
+One technique to avoid indentation is parameter validation at the top of a function before processing logic.
+
 ``` javascript
-function myFunc (list) {
+function myFunc(list) {
   if (!list.length) {
     return;
   }
@@ -128,9 +130,9 @@ function myFunc (list) {
 }
 ```
 
-However, if it's simple keep it simple.
+However, if it's simple keep it simple. Readability is the goal, and there's nothing more readable than an if statement.
 ``` javascript
-function myFunc (list) {
+function myFunc(list) {
   if (list.length) {
     doSomething(list.property);
     doMore(list);
@@ -143,7 +145,7 @@ function myFunc (list) {
 Be sure to avoid nameless anonymous functions. Give them a clear stack-trace-friendly name.
 
 ```javascript
-$.each(list, function processList (i, val) {
+$.each(list, function processList(i, val) {
   // ...
 });
 ```
@@ -161,7 +163,7 @@ var log = function (msg) {
 };
 
 // PREVIOUS PROBLEM.
-var log = function log (msg) {
+var log = function log(msg) {
   console.log(msg);
 };
 ```
@@ -230,7 +232,7 @@ You should always strive for super readable and parse-able doc blocks. Make deve
   *
   * @return {type}
   */
-function myFunc () {
+function myFunc() {
 ```
 
 ### Comments
